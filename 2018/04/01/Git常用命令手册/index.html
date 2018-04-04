@@ -99,18 +99,18 @@
 
 
 
-  <meta name="description" content="前言整理工作中的常用Git命令，以及问题处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置git r">
+  <meta name="description" content="前言整理工作中的常用Git命令，以及常见问题的处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置gi">
 <meta name="keywords" content="git,工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令手册">
 <meta property="og:url" content="http://yachao.wang/2018/04/01/Git常用命令手册/index.html">
 <meta property="og:site_name" content="晴空">
-<meta property="og:description" content="前言整理工作中的常用Git命令，以及问题处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置git r">
+<meta property="og:description" content="前言整理工作中的常用Git命令，以及常见问题的处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置gi">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-04T02:59:34.000Z">
+<meta property="og:updated_time" content="2018-04-04T03:44:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用命令手册">
-<meta name="twitter:description" content="前言整理工作中的常用Git命令，以及问题处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置git r">
+<meta name="twitter:description" content="前言整理工作中的常用Git命令，以及常见问题的处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置gi">
 
 
 
@@ -360,7 +360,7 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>整理工作中的常用Git命令，以及问题处理方法。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>整理工作中的常用Git命令，以及常见问题的处理方法。</p>
 <h3 id="代码仓库"><a href="#代码仓库" class="headerlink" title="代码仓库"></a>代码仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git init                         # 在本地创建一个空仓库（一般用不到）</span><br><span class="line">git clone   https://xxxx/xx      # 使用账号clone</span><br><span class="line">git clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置</span><br><span class="line"></span><br><span class="line">git remote -v                    # 查看当前仓库远程地址</span><br><span class="line"></span><br><span class="line">git config --list                # 查看当前全局配置</span><br></pre></td></tr></table></figure>
 <h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git status              # 查看状态，会列出修改的文件.（已经add的为绿色，否则为红色）</span><br><span class="line"></span><br><span class="line">git add file1 file2    # 提交指定修改</span><br><span class="line">git add .              # 提交全部修改</span><br><span class="line"></span><br><span class="line">git diff file1         # 查看文件的不同</span><br><span class="line"></span><br><span class="line">git commit -m &apos;修改注释&apos;     # 将当前add的修改提交</span><br><span class="line">git commit -m &apos;xxx&apos; file1   # file1不需要add，可直接提交</span><br><span class="line"></span><br><span class="line">git push                    # 将本地提交推送到远程仓库，在push之前需要保证本地仓库的代码是最新版本(git pull拉取一下)</span><br><span class="line"></span><br><span class="line">git log                     # 查看git提交历史记录</span><br></pre></td></tr></table></figure>
 <h3 id="拉取代码"><a href="#拉取代码" class="headerlink" title="拉取代码"></a>拉取代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git pull            # 最新远程代码库拉取到本地</span><br><span class="line"></span><br><span class="line">git checkout file1  # 将file的内容回滚到远程仓库版本</span><br></pre></td></tr></table></figure>
