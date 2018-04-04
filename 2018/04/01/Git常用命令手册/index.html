@@ -99,28 +99,25 @@
 
 
 
-  <meta name="description" content="前言用Markdown写笔记有一段时间了，目前主要在有道记录、简书两个平台上使用。 有道支持实时预览，但不能插入图片，只能从别的地方上传后在笔记中。主要用来记录一些私人的、工作上内容。插入图片方法：新建一篇笔记，并分享；然后将图片粘贴在该笔记中，通过访问分享地址进而获取图片地址。 简书在线编辑器，支持实时预览，图片的ctrl+v粘贴(良心之作)。文章还能投稿引流很不错，唯一的问题就是浏览器经常用来">
-<meta name="keywords" content="博客建站,Atom,Markdown">
+  <meta name="description" content="前言整理工作中的常用Git命令，以及问题处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置git r">
+<meta name="keywords" content="git,工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Atom打造完美Markdown编辑器">
-<meta property="og:url" content="http://yachao.wang/2017/12/08/Atom打造完美Markdown编辑器/index.html">
+<meta property="og:title" content="Git常用命令手册">
+<meta property="og:url" content="http://yachao.wang/2018/04/01/Git常用命令手册/index.html">
 <meta property="og:site_name" content="晴空">
-<meta property="og:description" content="前言用Markdown写笔记有一段时间了，目前主要在有道记录、简书两个平台上使用。 有道支持实时预览，但不能插入图片，只能从别的地方上传后在笔记中。主要用来记录一些私人的、工作上内容。插入图片方法：新建一篇笔记，并分享；然后将图片粘贴在该笔记中，通过访问分享地址进而获取图片地址。 简书在线编辑器，支持实时预览，图片的ctrl+v粘贴(良心之作)。文章还能投稿引流很不错，唯一的问题就是浏览器经常用来">
+<meta property="og:description" content="前言整理工作中的常用Git命令，以及问题处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置git r">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p0mqjeixa.bkt.clouddn.com/markdown-img-paste-%E7%A4%BA%E4%BE%8B.gif">
-<meta property="og:image" content="http://p0mqjeixa.bkt.clouddn.com/markdown-table-editor-%E7%A4%BA%E4%BE%8B.gif">
-<meta property="og:updated_time" content="2018-04-03T06:42:26.147Z">
+<meta property="og:updated_time" content="2018-04-04T02:59:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Atom打造完美Markdown编辑器">
-<meta name="twitter:description" content="前言用Markdown写笔记有一段时间了，目前主要在有道记录、简书两个平台上使用。 有道支持实时预览，但不能插入图片，只能从别的地方上传后在笔记中。主要用来记录一些私人的、工作上内容。插入图片方法：新建一篇笔记，并分享；然后将图片粘贴在该笔记中，通过访问分享地址进而获取图片地址。 简书在线编辑器，支持实时预览，图片的ctrl+v粘贴(良心之作)。文章还能投稿引流很不错，唯一的问题就是浏览器经常用来">
-<meta name="twitter:image" content="http://p0mqjeixa.bkt.clouddn.com/markdown-img-paste-%E7%A4%BA%E4%BE%8B.gif">
+<meta name="twitter:title" content="Git常用命令手册">
+<meta name="twitter:description" content="前言整理工作中的常用Git命令，以及问题处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置git r">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yachao.wang/2017/12/08/Atom打造完美Markdown编辑器/"/>
+  <link rel="canonical" href="http://yachao.wang/2018/04/01/Git常用命令手册/"/>
 
 
 
@@ -130,7 +127,7 @@
   };
 </script>
 
-  <title>Atom打造完美Markdown编辑器 | 晴空</title>
+  <title>Git常用命令手册 | 晴空</title>
   
 
 
@@ -297,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yachao.wang/2017/12/08/Atom打造完美Markdown编辑器/">
+    <link itemprop="mainEntityOfPage" href="http://yachao.wang/2018/04/01/Git常用命令手册/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="晴空歌">
@@ -314,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Atom打造完美Markdown编辑器</h1>
+          <h1 class="post-title" itemprop="name headline">Git常用命令手册</h1>
         
 
         <div class="post-meta">
@@ -326,7 +323,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T22:03:27+08:00">2017-12-08</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T16:03:27+08:00">2018-04-01</time>
             
 
             
@@ -363,27 +360,20 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>用Markdown写笔记有一段时间了，目前主要在有道记录、简书两个平台上使用。</p>
-<p><strong>有道</strong><br>支持实时预览，但不能插入图片，只能从别的地方上传后在笔记中。主要用来记录一些私人的、工作上内容。<br>插入图片方法：新建一篇笔记，并分享；然后将图片粘贴在该笔记中，通过访问分享地址进而获取图片地址。</p>
-<p><strong>简书</strong><br>在线编辑器，支持实时预览，图片的ctrl+v粘贴(良心之作)。文章还能投稿引流很不错，唯一的问题就是浏览器经常用来搜索资料，再切换回标签编辑不是很流畅。<br>看到有文章说使用Hexo建站后，会选择在简书编辑然后两边发布，其实也是一个不错的选择。</p>
-<p><strong>Atom</strong><br>Atom是github发布的一款文本编辑器，支持大量快捷键可以让程序员做到手指不离键盘。模块化是其主要的特点，有大量开源的插件，相比Sublime模块管理会更加友好。</p>
-<p>目前已有很多优秀Markdown插件，所以选择该编辑器来编写文章。</p>
-<h3 id="安装Atom"><a href="#安装Atom" class="headerlink" title="安装Atom"></a>安装Atom</h3><p>在其<a href="https://atom.io/" target="_blank" rel="noopener">官网</a>下载安装即可。</p>
-<p>安装成功后，点击右上角File-&gt;Setting-&gt;Install安装插件。</p>
-<h3 id="汉化包-simplified-chinese-menu"><a href="#汉化包-simplified-chinese-menu" class="headerlink" title="汉化包 simplified-chinese-menu"></a>汉化包 simplified-chinese-menu</h3><p>初次使用时可以先安装汉化包了解软件，目前支持Atom所有版本的汉化。</p>
-<h3 id="增强预览-markdown-preview-plus"><a href="#增强预览-markdown-preview-plus" class="headerlink" title="增强预览 markdown-preview-plus"></a>增强预览 markdown-preview-plus</h3><p>Atom自带的mardow-preview功能比较简单，markdown-preview-plus对齐进行了升级，支持实时预览(ctrl+shift+m)</p>
-<h3 id="同步滚动-markdown-scroll-rsync"><a href="#同步滚动-markdown-scroll-rsync" class="headerlink" title="同步滚动 markdown-scroll-rsync"></a>同步滚动 markdown-scroll-rsync</h3><p>同步滚动编辑和预览页面，方便定位位置进行修改。</p>
-<h3 id="图片粘贴-markdown-img-paste-重点"><a href="#图片粘贴-markdown-img-paste-重点" class="headerlink" title="图片粘贴 markdown-img-paste [重点]"></a>图片粘贴 markdown-img-paste [重点]</h3><p><a href="https://atom.io/packages/markdown-img-paste" target="_blank" rel="noopener">https://atom.io/packages/markdown-img-paste</a><br>使用ctrl+shift+v，将剪切板中的截图直接插入的文档中。支持三种模式：</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>整理工作中的常用Git命令，以及问题处理方法。</p>
+<h3 id="代码仓库"><a href="#代码仓库" class="headerlink" title="代码仓库"></a>代码仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git init                         # 在本地创建一个空仓库（一般用不到）</span><br><span class="line">git clone   https://xxxx/xx      # 使用账号clone</span><br><span class="line">git clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置</span><br><span class="line"></span><br><span class="line">git remote -v                    # 查看当前仓库远程地址</span><br><span class="line"></span><br><span class="line">git config --list                # 查看当前全局配置</span><br></pre></td></tr></table></figure>
+<h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git status              # 查看状态，会列出修改的文件.（已经add的为绿色，否则为红色）</span><br><span class="line"></span><br><span class="line">git add file1 file2    # 提交指定修改</span><br><span class="line">git add .              # 提交全部修改</span><br><span class="line"></span><br><span class="line">git diff file1         # 查看文件的不同</span><br><span class="line"></span><br><span class="line">git commit -m &apos;修改注释&apos;     # 将当前add的修改提交</span><br><span class="line">git commit -m &apos;xxx&apos; file1   # file1不需要add，可直接提交</span><br><span class="line"></span><br><span class="line">git push                    # 将本地提交推送到远程仓库，在push之前需要保证本地仓库的代码是最新版本(git pull拉取一下)</span><br><span class="line"></span><br><span class="line">git log                     # 查看git提交历史记录</span><br></pre></td></tr></table></figure>
+<h3 id="拉取代码"><a href="#拉取代码" class="headerlink" title="拉取代码"></a>拉取代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git pull            # 最新远程代码库拉取到本地</span><br><span class="line"></span><br><span class="line">git checkout file1  # 将file的内容回滚到远程仓库版本</span><br></pre></td></tr></table></figure>
+<h4 id="拉取代码出现冲突"><a href="#拉取代码出现冲突" class="headerlink" title="拉取代码出现冲突"></a>拉取代码出现冲突</h4><p>在执行pull命令时经常会因为修改同一个文件产生冲突，进而无法拉取代码的情况。需要使用缓存区进行解决。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">情景再现：</span><br><span class="line">A: 本地修改好的文件已经全部执行了commit操作，需要推送到远程仓库，但是pull命令失败；</span><br><span class="line">B: 本地开发了一半，同事更新了代码需要先更新在继续后续的开发。</span><br><span class="line"></span><br><span class="line">解决问题：</span><br><span class="line">1. git stash                       # 将本地所有修改放到暂存区</span><br><span class="line">   git stash save &apos;name abc&apos;       # 放到暂存区同时起个名字</span><br><span class="line">2. git pull         #拉取最新代码</span><br><span class="line">3. git stash pop                   # 将缓存区的修改同步到本地仓库，同时修改的文件可能会有冲突。</span><br><span class="line">4. 解决冲突， 然后执行 git add file 即可。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">其他：</span><br><span class="line">暂存区可以暂存多次；</span><br><span class="line">git stash list 查看暂存列表； </span><br><span class="line">stash pop xxx 可以弹出指定的暂存版本； （在同时开发多个功能时可能会用到）</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用开源git仓库"><a href="#使用开源git仓库" class="headerlink" title="使用开源git仓库"></a>使用开源git仓库</h3><p>当协同开发时可能会提公共类库，然后大家都可以维护；或者用了第三方开源git库，需要自定义修改，同时还要保证能及时更新； 此时需要用到 submodule 子模块的概念。<br>submodule在仓库中增加子模块，子模块有自己的仓库地址，可以自行维护。</p>
+<p>拿hexo中的next主题做例子： </p>
 <ol>
-<li>Save images in assets floder: 将图片保存在./assets/中</li>
-<li>Use sm.ms for image link: sm.ms是一个免费图床，但是国内好像访问不了</li>
-<li>Use qiniu for imgage link: 使用七牛云存储图片，需要配置七牛的秘钥、空间名、域名。</li>
+<li>blog/ 是一个git仓库，存储hexo的原始md文档、配置文件、themes等内容；</li>
+<li>next是第三方主题，会不定期更新；</li>
+<li>本地使用时也需要修改，但是仓库为他人的，自己的修改无法提交；</li>
+<li>hexo搭建的博客需要在多台电脑间同时使用。</li>
 </ol>
-<p>注册七牛账号并实名认证后，每个月回给免费的10G存储，用来做个人博客图床非常不错。<br>七牛注册地址：<a href="https://atom.io/packages/markdown-img-paste" target="_blank" rel="noopener">https://portal.qiniu.com/signup?code=3lmwk75lqbviq</a>, 可以使用这个地址注册，这样就可以多给我5G空间了，谢谢~<br><img src="http://p0mqjeixa.bkt.clouddn.com/markdown-img-paste-%E7%A4%BA%E4%BE%8B.gif" alt="markdown-img-paste插件配图"></p>
-<h3 id="表格编辑-markdown-table-editor"><a href="#表格编辑-markdown-table-editor" class="headerlink" title="表格编辑 markdown-table-editor"></a>表格编辑 markdown-table-editor</h3><p>markdown的表格编写需要特定的语法格式，而且新行的数据太多是无法和上面的内容对齐，编写起来很不方便。<br>table-editor插件就能很好的解决该问题了：自动补全、自动调节表格宽度。<br><a href="https://atom.io/packages/markdown-table-editor" target="_blank" rel="noopener">https://atom.io/packages/markdown-table-editor</a>  目前在1.4.3安装会报错。<br><img src="http://p0mqjeixa.bkt.clouddn.com/markdown-table-editor-%E7%A4%BA%E4%BE%8B.gif" alt="markdown-table-editor"></p>
-<h3 id="minimap"><a href="#minimap" class="headerlink" title="minimap"></a>minimap</h3><p>同sublime右边栏一样，让你了解当前屏幕所处位置，快速翻页。</p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>按照好上面的插件 + Atom好看的主题，打造的Markdown编辑器就非常完美啦。   </p>
-<p>网上都说Atom比Sublime卡，目前来看内存确实占用比较多，倒是还没有出现卡顿的情况。<br>先用用看，不行就安装个新版本，目前使用的是Pentestbox自带的1.4.3版本。</p>
+<p>操作流程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1. 在github中fork主题仓库https://github.com/iissnan/hexo-theme-next 到自己的仓库里</span><br><span class="line"></span><br><span class="line">电脑A:</span><br><span class="line">&gt; git submodule add git@github.com:sharehappy11/hexo-theme-next themes/next     #将个人仓库加入子模块中</span><br><span class="line">&gt; cd themes/next;  git add -&gt; commit -&gt; push             # 进入到themes/next目录则可以直接使用git命令进行维护</span><br><span class="line"></span><br><span class="line">电脑B:</span><br><span class="line">&gt; git clone blog_repo       # 拉取blog/博客仓库</span><br><span class="line">&gt; git submodule update      # 拉取子模块代码</span><br><span class="line">&gt; cd themes/next; </span><br><span class="line">&gt;&gt; git pull origin master   # 更新子模块代码</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">子模块维护：</span><br><span class="line">本地修改了next主题，可以直接提交，因为是自己的仓库所以可以随便修改；</span><br><span class="line">自己修改的功能想提交给官方时，可以给官方发送申请，提交自己的修改，为开源做共享；</span><br><span class="line">官方主题更新时，可以通过github的pull reqeust功能同步最新功能；</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -404,11 +394,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/博客建站/" rel="tag"># 博客建站</a>
+            <a href="/tags/git/" rel="tag"># git</a>
           
-            <a href="/tags/Atom/" rel="tag"># Atom</a>
-          
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            <a href="/tags/工具/" rel="tag"># 工具</a>
           
         </div>
       
@@ -421,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/07/Hexo搭建个人博客/" rel="next" title="Hexo搭建个人博客">
-                <i class="fa fa-chevron-left"></i> Hexo搭建个人博客
+              <a href="/2017/12/13/DVWA漏洞整理与利用说明/" rel="next" title="DVWA漏洞整理与利用说明">
+                <i class="fa fa-chevron-left"></i> DVWA漏洞整理与利用说明
               </a>
             
           </div>
@@ -430,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/09/Next主题-文章目录锚点问题修复/" rel="prev" title="Next主题-文章目录锚点问题修复">
-                Next主题-文章目录锚点问题修复 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -590,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Atom"><span class="nav-number">2.</span> <span class="nav-text">安装Atom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#汉化包-simplified-chinese-menu"><span class="nav-number">3.</span> <span class="nav-text">汉化包 simplified-chinese-menu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增强预览-markdown-preview-plus"><span class="nav-number">4.</span> <span class="nav-text">增强预览 markdown-preview-plus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步滚动-markdown-scroll-rsync"><span class="nav-number">5.</span> <span class="nav-text">同步滚动 markdown-scroll-rsync</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片粘贴-markdown-img-paste-重点"><span class="nav-number">6.</span> <span class="nav-text">图片粘贴 markdown-img-paste [重点]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格编辑-markdown-table-editor"><span class="nav-number">7.</span> <span class="nav-text">表格编辑 markdown-table-editor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimap"><span class="nav-number">8.</span> <span class="nav-text">minimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">9.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码仓库"><span class="nav-number">2.</span> <span class="nav-text">代码仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交代码"><span class="nav-number">3.</span> <span class="nav-text">提交代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拉取代码"><span class="nav-number">4.</span> <span class="nav-text">拉取代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拉取代码出现冲突"><span class="nav-number">4.1.</span> <span class="nav-text">拉取代码出现冲突</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用开源git仓库"><span class="nav-number">5.</span> <span class="nav-text">使用开源git仓库</span></a></li></ol></div>
             
 
           </div>
