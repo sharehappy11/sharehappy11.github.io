@@ -99,25 +99,26 @@
 
 
 
-  <meta name="description" content="前言整理工作中的常用Git命令，以及常见问题的处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置gi">
-<meta name="keywords" content="git,工具">
+  <meta name="description" content="问题最近发现公司线上业务MongoDB连接数稳定在1w/m左右，但是该库只用于后端业务，根本不可能有这么高并发，如此高的连接数感觉存在问题。 Mongo的查询Qps只有150左右，和连接数完全不符，大量的连接数不知道是哪里开启的。 原因面向百度、Google搜素引擎，发现PHP7的MongoDB扩展中，PHP客户端是长连接（及请求结束后，PHP-FPM没有被杀死，连接就一直保持，目的是减少新建连接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常用命令手册">
-<meta property="og:url" content="http://yachao.wang/2018/04/01/Git常用命令手册/index.html">
+<meta property="og:title" content="PHP-FPM MongoDB连接数爆炸">
+<meta property="og:url" content="http://yachao.wang/2019/11/23/php/phpfpm-mongodb-connection-too-much/index.html">
 <meta property="og:site_name" content="晴空">
-<meta property="og:description" content="前言整理工作中的常用Git命令，以及常见问题的处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置gi">
+<meta property="og:description" content="问题最近发现公司线上业务MongoDB连接数稳定在1w/m左右，但是该库只用于后端业务，根本不可能有这么高并发，如此高的连接数感觉存在问题。 Mongo的查询Qps只有150左右，和连接数完全不符，大量的连接数不知道是哪里开启的。 原因面向百度、Google搜素引擎，发现PHP7的MongoDB扩展中，PHP客户端是长连接（及请求结束后，PHP-FPM没有被杀死，连接就一直保持，目的是减少新建连接">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-31T07:19:12.871Z">
+<meta property="og:image" content="http://yachao.wang/2019/11/23/php/phpfpm-mongodb-connection-too-much/yc_2019-11-23-16-00-42.png">
+<meta property="og:updated_time" content="2019-11-23T09:17:51.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git常用命令手册">
-<meta name="twitter:description" content="前言整理工作中的常用Git命令，以及常见问题的处理方法。 代码仓库1234567git init                         # 在本地创建一个空仓库（一般用不到）git clone   https://xxxx/xx      # 使用账号clonegit clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置gi">
+<meta name="twitter:title" content="PHP-FPM MongoDB连接数爆炸">
+<meta name="twitter:description" content="问题最近发现公司线上业务MongoDB连接数稳定在1w/m左右，但是该库只用于后端业务，根本不可能有这么高并发，如此高的连接数感觉存在问题。 Mongo的查询Qps只有150左右，和连接数完全不符，大量的连接数不知道是哪里开启的。 原因面向百度、Google搜素引擎，发现PHP7的MongoDB扩展中，PHP客户端是长连接（及请求结束后，PHP-FPM没有被杀死，连接就一直保持，目的是减少新建连接">
+<meta name="twitter:image" content="http://yachao.wang/2019/11/23/php/phpfpm-mongodb-connection-too-much/yc_2019-11-23-16-00-42.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yachao.wang/2018/04/01/Git常用命令手册/"/>
+  <link rel="canonical" href="http://yachao.wang/2019/11/23/php/phpfpm-mongodb-connection-too-much/"/>
 
 
 
@@ -127,7 +128,7 @@
   };
 </script>
 
-  <title>Git常用命令手册 | 晴空</title>
+  <title>PHP-FPM MongoDB连接数爆炸 | 晴空</title>
   
 
 
@@ -303,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yachao.wang/2018/04/01/Git常用命令手册/">
+    <link itemprop="mainEntityOfPage" href="http://yachao.wang/2019/11/23/php/phpfpm-mongodb-connection-too-much/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="晴空歌">
@@ -320,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git常用命令手册</h1>
+          <h1 class="post-title" itemprop="name headline">PHP-FPM MongoDB连接数爆炸</h1>
         
 
         <div class="post-meta">
@@ -332,7 +333,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T16:03:27+08:00">2018-04-01</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-23T22:55:27+08:00">2019-11-23</time>
             
 
             
@@ -341,6 +342,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -369,20 +388,20 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>整理工作中的常用Git命令，以及常见问题的处理方法。</p>
-<h3 id="代码仓库"><a href="#代码仓库" class="headerlink" title="代码仓库"></a>代码仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git init                         # 在本地创建一个空仓库（一般用不到）</span><br><span class="line">git clone   https://xxxx/xx      # 使用账号clone</span><br><span class="line">git clone   git@github.com/xxx   # 使用rsa或者gpk私钥验证，需要在git账户进行配置</span><br><span class="line"></span><br><span class="line">git remote -v                    # 查看当前仓库远程地址</span><br><span class="line"></span><br><span class="line">git config --list                # 查看当前全局配置</span><br></pre></td></tr></table></figure>
-<h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git status              # 查看状态，会列出修改的文件.（已经add的为绿色，否则为红色）</span><br><span class="line"></span><br><span class="line">git add file1 file2    # 提交指定修改</span><br><span class="line">git add .              # 提交全部修改</span><br><span class="line"></span><br><span class="line">git diff file1         # 查看文件的不同</span><br><span class="line"></span><br><span class="line">git commit -m &apos;修改注释&apos;     # 将当前add的修改提交</span><br><span class="line">git commit -m &apos;xxx&apos; file1   # file1不需要add，可直接提交</span><br><span class="line"></span><br><span class="line">git push                    # 将本地提交推送到远程仓库，在push之前需要保证本地仓库的代码是最新版本(git pull拉取一下)</span><br><span class="line"></span><br><span class="line">git log                     # 查看git提交历史记录</span><br></pre></td></tr></table></figure>
-<h3 id="拉取代码"><a href="#拉取代码" class="headerlink" title="拉取代码"></a>拉取代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git pull            # 最新远程代码库拉取到本地</span><br><span class="line"></span><br><span class="line">git checkout file1  # 将file的内容回滚到远程仓库版本</span><br></pre></td></tr></table></figure>
-<h4 id="拉取代码出现冲突"><a href="#拉取代码出现冲突" class="headerlink" title="拉取代码出现冲突"></a>拉取代码出现冲突</h4><p>在执行pull命令时经常会因为修改同一个文件产生冲突，进而无法拉取代码的情况。需要使用缓存区进行解决。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">情景再现：</span><br><span class="line">A: 本地修改好的文件已经全部执行了commit操作，需要推送到远程仓库，但是pull命令失败；</span><br><span class="line">B: 本地开发了一半，同事更新了代码需要先更新在继续后续的开发。</span><br><span class="line"></span><br><span class="line">解决问题：</span><br><span class="line">1. git stash                       # 将本地所有修改放到暂存区</span><br><span class="line">   git stash save &apos;name abc&apos;       # 放到暂存区同时起个名字</span><br><span class="line">2. git pull         #拉取最新代码</span><br><span class="line">3. git stash pop                   # 将缓存区的修改同步到本地仓库，同时修改的文件可能会有冲突。</span><br><span class="line">4. 解决冲突， 然后执行 git add file 即可。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">其他：</span><br><span class="line">暂存区可以暂存多次；</span><br><span class="line">git stash list 查看暂存列表； </span><br><span class="line">stash pop xxx 可以弹出指定的暂存版本； （在同时开发多个功能时可能会用到）</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用开源git仓库"><a href="#使用开源git仓库" class="headerlink" title="使用开源git仓库"></a>使用开源git仓库</h3><p>当协同开发时可能会提公共类库，然后大家都可以维护；或者用了第三方开源git库，需要自定义修改，同时还要保证能及时更新； 此时需要用到 submodule 子模块的概念。<br>submodule在仓库中增加子模块，子模块有自己的仓库地址，可以自行维护。</p>
-<p>拿hexo中的next主题做例子： </p>
-<ol>
-<li>blog/ 是一个git仓库，存储hexo的原始md文档、配置文件、themes等内容；</li>
-<li>next是第三方主题，会不定期更新；</li>
-<li>本地使用时也需要修改，但是仓库为他人的，自己的修改无法提交；</li>
-<li>hexo搭建的博客需要在多台电脑间同时使用。</li>
-</ol>
-<p>操作流程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1. 在github中fork主题仓库https://github.com/iissnan/hexo-theme-next 到自己的仓库里</span><br><span class="line"></span><br><span class="line">电脑A:</span><br><span class="line">&gt; git submodule add git@github.com:sharehappy11/hexo-theme-next themes/next     #将个人仓库加入子模块中</span><br><span class="line">&gt; cd themes/next;  git add -&gt; commit -&gt; push             # 进入到themes/next目录则可以直接使用git命令进行维护</span><br><span class="line"></span><br><span class="line">电脑B:</span><br><span class="line">&gt; git clone blog_repo       # 拉取blog/博客仓库</span><br><span class="line">&gt; git submodule update      # 拉取子模块代码</span><br><span class="line">&gt; cd themes/next; </span><br><span class="line">&gt;&gt; git pull origin master   # 更新子模块代码</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">子模块维护：</span><br><span class="line">本地修改了next主题，可以直接提交，因为是自己的仓库所以可以随便修改；</span><br><span class="line">自己修改的功能想提交给官方时，可以给官方发送申请，提交自己的修改，为开源做共享；</span><br><span class="line">官方主题更新时，可以通过github的pull reqeust功能同步最新功能；</span><br></pre></td></tr></table></figure></p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>最近发现公司线上业务MongoDB连接数稳定在1w/m左右，但是该库只用于后端业务，根本不可能有这么高并发，如此高的连接数感觉存在问题。</p>
+<p>Mongo的查询Qps只有150左右，和连接数完全不符，大量的连接数不知道是哪里开启的。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>面向百度、Google搜素引擎，发现PHP7的MongoDB扩展中，PHP客户端是长连接（及请求结束后，PHP-FPM没有被杀死，连接就一直保持，目的是减少新建连接带来的性能消耗），并且该扩展没有提供关闭连接的方法。</p>
+<p><a href="https://github.com/mongodb/mongo-php-driver/issues/393" target="_blank" rel="noopener">官方说明如下</a>:<br><img src="/2019/11/23/php/phpfpm-mongodb-connection-too-much/yc_2019-11-23-16-00-42.png" alt="MongoDB长联说明"></p>
+<p>作者大概的意思就是在最初实现该扩展时，就使用的是长联，并废弃了close方法。请求结束后关闭连接不能解决新建连接的问题，更耗费性能。<br>综上所述，我们线上服务器单机的pm.max_spare_servers=256，也就是单机就会有256个连接数，这样一算基本连接数基本就合理了。</p>
+<p>另外，回复中说扩展在版本号1.2.0~1.2.1x时提供了连接池功能，该版本用在php-fpm中可能会存在更大的问题，每个fpm里都配置了连接池，会导致连接数更大，详见：<a href="https://www.cnblogs.com/zhengyun_ustc/archive/2013/01/15/mogodb-php-driver.html" target="_blank" rel="noopener">PHP-FPM模式下可怕的 MongoDB-PHP-Driver 连接池无节制连接问题</a>.</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>因为PHP-FPM要保持长连接，所以目前看到的解决方案是：降低fpm.conf中的pm.min_spare_servers 和 pm.max_spare_servers的数量，但是我们一直是这么用的，降低php-fpm可能会导致其他的问题。</p>
+<p>通过<code>db.serverStats().connections;</code>查看mogon的连接信息，发现mongo最多支持50w连接，目前是1w连接应该没什么影响，先维持现状，如果以后成为瓶颈了考虑用其他扩展，或者Go语言实现子服务。</p>
+<p>如果你知道其他的解决方案，请不吝赐教，mail:<a href="mailto:919038060@qq.com" target="_blank" rel="noopener">919038060@qq.com</a> 谢谢。</p>
+<h3 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h3><ul>
+<li>长连接说明 <a href="https://github.com/mongodb/mongo-php-driver/issues/393" target="_blank" rel="noopener">https://github.com/mongodb/mongo-php-driver/issues/393</a></li>
+<li>修改源码，避免长联的方案 <a href="https://github.com/mongodb/mongo-php-driver/issues/732" target="_blank" rel="noopener">https://github.com/mongodb/mongo-php-driver/issues/732</a></li>
+<li>部分版本连接池问题 <a href="https://www.cnblogs.com/zhengyun_ustc/archive/2013/01/15/mogodb-php-driver.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhengyun_ustc/archive/2013/01/15/mogodb-php-driver.html</a></li>
+</ul>
 
       
     </div>
@@ -401,14 +420,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/git/" rel="tag"># git</a>
-          
-            <a href="/tags/工具/" rel="tag"># 工具</a>
-          
-        </div>
-      
 
       
       
@@ -418,8 +429,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/13/DVWA漏洞整理与利用说明/" rel="next" title="DVWA漏洞整理与利用说明">
-                <i class="fa fa-chevron-left"></i> DVWA漏洞整理与利用说明
+              <a href="/2019/11/16/project/高并发红包设计方案/" rel="next" title="高并发红包设计方案">
+                <i class="fa fa-chevron-left"></i> 高并发红包设计方案
               </a>
             
           </div>
@@ -427,10 +438,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/07/清明归京杂谈/" rel="prev" title="清明归京杂谈">
-                清明归京杂谈 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -606,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码仓库"><span class="nav-number">2.</span> <span class="nav-text">代码仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交代码"><span class="nav-number">3.</span> <span class="nav-text">提交代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拉取代码"><span class="nav-number">4.</span> <span class="nav-text">拉取代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拉取代码出现冲突"><span class="nav-number">4.1.</span> <span class="nav-text">拉取代码出现冲突</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用开源git仓库"><span class="nav-number">5.</span> <span class="nav-text">使用开源git仓库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">3.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关阅读"><span class="nav-number">3.1.</span> <span class="nav-text">相关阅读</span></a></li></ol></li></ol></div>
             
 
           </div>
