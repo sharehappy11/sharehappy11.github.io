@@ -339,9 +339,12 @@
             const startIndex = (currentPage - 1) * config.wordsPerPage;
             const endIndex = startIndex + config.wordsPerPage;
             const currentWords = config.words.slice(startIndex, endIndex);
-
-            wordList.innerHTML = `
-                ${currentWords.map(word => `
+            
+            // 遍历currentWords
+            html = ""
+            currentWords.forEach(function(word){
+                var word_speak = word.english.replace(/'/g, '-')
+                html += `
                     <div class="word-item">
                         <div class="word-content">
                             <div class="word-line">
@@ -352,9 +355,11 @@
                                 <div class="word-chinese">${word.chinese}</div>
                             </div>
                         </div>
-                        <button class="pronunciation-btn" onclick="speak('${word.english}')">🔊</button>
+                        <button class="pronunciation-btn" onclick="speak('${word_speak}')">🔊</button>
                     </div>
-                `).join('')}
+                `
+            })
+            wordList.innerHTML = html + `
                 <div class="pagination">
                     <button class="page-btn" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>上一页</button>
                     <button class="page-btn" onclick="changePage(${currentPage + 1})" ${endIndex >= config.words.length ? 'disabled' : ''}>下一页</button>
@@ -480,6 +485,8 @@
 
         // 发音功能
         async function speak(text) {
+            text = text.replace(/-/g, "'");
+            console.log(text);
             if ('speechSynthesis' in window) {
                 const utterance = new SpeechSynthesisUtterance(text);
                 utterance.lang = 'en-US';
