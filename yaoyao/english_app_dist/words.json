@@ -1,0 +1,49 @@
+{
+  "units": [
+    {
+      "id": "unit1",
+      "name": "Unit 1: My Classroom",
+      "description": "Learn words about things in your classroom.",
+      "words": [
+        {"english": "book", "chinese": "书", "phonetic": "/bʊk/", "image": ""},
+        {"english": "pen", "chinese": "钢笔", "phonetic": "/pɛn/", "image": ""},
+        {"english": "desk", "chinese": "课桌", "phonetic": "/dɛsk/", "image": ""},
+        {"english": "chair", "chinese": "椅子", "phonetic": "/tʃɛr/", "image": ""},
+        {"english": "bag", "chinese": "书包", "phonetic": "/bæɡ/", "image": ""},
+        {"english": "pencil", "chinese": "铅笔", "phonetic": "/ˈpɛnsəl/", "image": ""},
+        {"english": "ruler", "chinese": "尺子", "phonetic": "/ˈruːlər/", "image": ""},
+        {"english": "eraser", "chinese": "橡皮", "phonetic": "/ɪˈreɪsər/", "image": ""}
+      ]
+    },
+    {
+      "id": "unit2",
+      "name": "Unit 2: Colors and Numbers",
+      "description": "Learn about colors and numbers.",
+      "words": [
+        {"english": "red", "chinese": "红色", "phonetic": "/rɛd/", "image": ""},
+        {"english": "blue", "chinese": "蓝色", "phonetic": "/bluː/", "image": ""},
+        {"english": "yellow", "chinese": "黄色", "phonetic": "/ˈjɛloʊ/", "image": ""},
+        {"english": "green", "chinese": "绿色", "phonetic": "/ɡriːn/", "image": ""},
+        {"english": "one", "chinese": "一", "phonetic": "/wʌn/", "image": ""},
+        {"english": "two", "chinese": "二", "phonetic": "/tuː/", "image": ""},
+        {"english": "three", "chinese": "三", "phonetic": "/θriː/", "image": ""},
+        {"english": "four", "chinese": "四", "phonetic": "/fɔːr/", "image": ""}
+      ]
+    },
+    {
+      "id": "unit3",
+      "name": "Unit 3: Animals",
+      "description": "Learn names of common animals.",
+      "words": [
+        {"english": "ca't", "chinese": "猫", "phonetic": "/kæt/", "image": ""},
+        {"english": "dog", "chinese": "狗", "phonetic": "/dɔːɡ/", "image": ""},
+        {"english": "bird", "chinese": "鸟", "phonetic": "/bɜːrd/", "image": ""},
+        {"english": "fish", "chinese": "鱼", "phonetic": "/fɪʃ/", "image": ""},
+        {"english": "pig", "chinese": "猪", "phonetic": "/pɪɡ/", "image": ""},
+        {"english": "duck", "chinese": "鸭子", "phonetic": "/dʌk/", "image": ""},
+        {"english": "bear", "chinese": "熊", "phonetic": "/bɛr/", "image": ""},
+        {"english": "lion", "chinese": "狮子", "phonetic": "/ˈlaɪən/", "image": ""}
+      ]
+    }
+  ]
+} 
