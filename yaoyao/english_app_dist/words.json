@@ -1,48 +1,190 @@
 {
   "units": [
     {
-      "id": "unit1",
-      "name": "Unit 1: My Classroom",
-      "description": "Learn words about things in your classroom.",
+      "id": "lesson1",
+      "name": "Lesson 1",
       "words": [
-        {"english": "book", "chinese": "书", "phonetic": "/bʊk/", "image": ""},
-        {"english": "pen", "chinese": "钢笔", "phonetic": "/pɛn/", "image": ""},
-        {"english": "desk", "chinese": "课桌", "phonetic": "/dɛsk/", "image": ""},
-        {"english": "chair", "chinese": "椅子", "phonetic": "/tʃɛr/", "image": ""},
-        {"english": "bag", "chinese": "书包", "phonetic": "/bæɡ/", "image": ""},
-        {"english": "pencil", "chinese": "铅笔", "phonetic": "/ˈpɛnsəl/", "image": ""},
-        {"english": "ruler", "chinese": "尺子", "phonetic": "/ˈruːlər/", "image": ""},
-        {"english": "eraser", "chinese": "橡皮", "phonetic": "/ɪˈreɪsər/", "image": ""}
+        { "english": "time", "phonetic": "[taɪm]", "chinese": "时间" },
+        { "english": "o'clock", "phonetic": "[əˈklɒk]", "chinese": "……点钟" },
+        { "english": "nice", "phonetic": "[naɪs]", "chinese": "令人愉快的，令人高兴的" }
       ]
     },
     {
-      "id": "unit2",
-      "name": "Unit 2: Colors and Numbers",
-      "description": "Learn about colors and numbers.",
+      "id": "lesson2",
+      "name": "Lesson 2",
       "words": [
-        {"english": "red", "chinese": "红色", "phonetic": "/rɛd/", "image": ""},
-        {"english": "blue", "chinese": "蓝色", "phonetic": "/bluː/", "image": ""},
-        {"english": "yellow", "chinese": "黄色", "phonetic": "/ˈjɛloʊ/", "image": ""},
-        {"english": "green", "chinese": "绿色", "phonetic": "/ɡriːn/", "image": ""},
-        {"english": "one", "chinese": "一", "phonetic": "/wʌn/", "image": ""},
-        {"english": "two", "chinese": "二", "phonetic": "/tuː/", "image": ""},
-        {"english": "three", "chinese": "三", "phonetic": "/θriː/", "image": ""},
-        {"english": "four", "chinese": "四", "phonetic": "/fɔːr/", "image": ""}
+        { "english": "when", "phonetic": "[wen]", "chinese": "什么时候" },
+        { "english": "thirty", "phonetic": "[ˈθɜːti]", "chinese": "三十" },
+        { "english": "home", "phonetic": "[həʊm]", "chinese": "回家，在家，家" },
+        { "english": "five", "phonetic": "[faɪv]", "chinese": "五" }
       ]
     },
     {
-      "id": "unit3",
-      "name": "Unit 3: Animals",
-      "description": "Learn names of common animals.",
+      "id": "lesson3",
+      "name": "Lesson 3",
       "words": [
-        {"english": "ca't", "chinese": "猫", "phonetic": "/kæt/", "image": ""},
-        {"english": "dog", "chinese": "狗", "phonetic": "/dɔːɡ/", "image": ""},
-        {"english": "bird", "chinese": "鸟", "phonetic": "/bɜːrd/", "image": ""},
-        {"english": "fish", "chinese": "鱼", "phonetic": "/fɪʃ/", "image": ""},
-        {"english": "pig", "chinese": "猪", "phonetic": "/pɪɡ/", "image": ""},
-        {"english": "duck", "chinese": "鸭子", "phonetic": "/dʌk/", "image": ""},
-        {"english": "bear", "chinese": "熊", "phonetic": "/bɛr/", "image": ""},
-        {"english": "lion", "chinese": "狮子", "phonetic": "/ˈlaɪən/", "image": ""}
+        { "english": "fifty", "phonetic": "[ˈfɪfti]", "chinese": "五十" },
+        { "english": "nine", "phonetic": "[naɪn]", "chinese": "九" },
+        { "english": "twenty", "phonetic": "[ˈtwenti]", "chinese": "二十" },
+        { "english": "sleep", "phonetic": "[sliːp]", "chinese": "睡觉" },
+        { "english": "good", "phonetic": "[ɡʊd]", "chinese": "好的" },
+        { "english": "one", "phonetic": "[wʌn]", "chinese": "一" }
+      ]
+    },
+    {
+      "id": "lesson5",
+      "name": "Lesson 5",
+      "words": [
+        { "english": "dad", "phonetic": "[dæd]", "chinese": "爸爸" },
+        { "english": "for", "phonetic": "[fɔːr]", "chinese": "供……使用，为……所需" },
+        { "english": "bread", "phonetic": "[bred]", "chinese": "面包" },
+        { "english": "milk", "phonetic": "[mɪlk]", "chinese": "牛奶" },
+        { "english": "egg", "phonetic": "[eɡ]", "chinese": "鸡蛋" },
+        { "english": "an", "phonetic": "[æn]", "chinese": "一，一个（用于元音读音开头的词之前）" }
+      ]
+    },
+    {
+      "id": "lesson6",
+      "name": "Lesson 6",
+      "words": [
+        { "english": "fish", "phonetic": "[fɪʃ]", "chinese": "鱼" },
+        { "english": "rice", "phonetic": "[raɪs]", "chinese": "米饭" },
+        { "english": "noodle", "phonetic": "[ˈnuːdl]", "chinese": "面条" },
+        { "english": "down", "phonetic": "[daʊn]", "chinese": "向下" },
+        { "english": "ice cream", "phonetic": "[aɪs kriːm]", "chinese": "冰淇淋" }
+      ]
+    },
+    {
+      "id": "lesson7",
+      "name": "Lesson 7",
+      "words": [
+        { "english": "back", "phonetic": "[bæk]", "chinese": "回来" },
+        { "english": "hungry", "phonetic": "[ˈhʌŋɡri]", "chinese": "饥饿的" },
+        { "english": "hello", "phonetic": "[həˈləʊ]", "chinese": "喂，你好（打电话或表示问候）" },
+        { "english": "dear", "phonetic": "[dɪə]", "chinese": "亲爱的" },
+        { "english": "orange", "phonetic": "[ˈɒrɪndʒ]", "chinese": "橙子" },
+        { "english": "vegetable", "phonetic": "[ˈvedʒtəbl]", "chinese": "蔬菜" },
+        { "english": "evening", "phonetic": "[ˈiːvnɪŋ]", "chinese": "晚上，傍晚" }
+      ]
+    },
+    {
+      "id": "lesson9",
+      "name": "Lesson 9",
+      "words": [
+        { "english": "room", "phonetic": "[ruːm]", "chinese": "房间" },
+        { "english": "love", "phonetic": "[lʌv]", "chinese": "喜爱" },
+        { "english": "bed", "phonetic": "[bed]", "chinese": "床" },
+        { "english": "chair", "phonetic": "[tʃeə]", "chinese": "椅子" },
+        { "english": "sit", "phonetic": "[sɪt]", "chinese": "坐" }
+      ]
+    },
+    {
+      "id": "lesson10",
+      "name": "Lesson 10",
+      "words": [
+        { "english": "kitchen", "phonetic": "[ˈkɪtʃɪn]", "chinese": "厨房" },
+        { "english": "fridge", "phonetic": "[frɪdʒ]", "chinese": "电冰箱" },
+        { "english": "table", "phonetic": "[ˈteɪbl]", "chinese": "桌子" }
+      ]
+    },
+    {
+      "id": "lesson11",
+      "name": "Lesson 11",
+      "words": [
+        { "english": "bathroom", "phonetic": "[ˈbɑːθruːm]", "chinese": "卫生间" },
+        { "english": "want", "phonetic": "[wɒnt]", "chinese": "想要，要" },
+        { "english": "call", "phonetic": "[kɔːl]", "chinese": "打电话" },
+        { "english": "mum", "phonetic": "[mʌm]", "chinese": "妈妈" },
+        { "english": "phone", "phonetic": "[fəʊn]", "chinese": "电话" }
+      ]
+    },
+    {
+      "id": "lesson13",
+      "name": "Lesson 13",
+      "words": [
+        { "english": "where", "phonetic": "[weə]", "chinese": "在哪里" },
+        { "english": "shirt", "phonetic": "[ʃɜːt]", "chinese": "衬衫" },
+        { "english": "find", "phonetic": "[faɪnd]", "chinese": "找到，发现" },
+        { "english": "coat", "phonetic": "[kəʊt]", "chinese": "上衣，外套" },
+        { "english": "sofa", "phonetic": "[ˈsəʊfə]", "chinese": "沙发" }
+      ]
+    },
+    {
+      "id": "lesson14",
+      "name": "Lesson 14",
+      "words": [
+        { "english": "this", "phonetic": "[ðɪs]", "chinese": "这，这个" },
+        { "english": "jacket", "phonetic": "[ˈdʒækɪt]", "chinese": "夹克衫" },
+        { "english": "that", "phonetic": "[ðæt]", "chinese": "那，那个" },
+        { "english": "schoolbag", "phonetic": "[ˈskuːlbæɡ]", "chinese": "书包" }
+      ]
+    },
+    {
+      "id": "lesson15",
+      "name": "Lesson 15",
+      "words": [
+        { "english": "shorts", "phonetic": "[ʃɔːts]", "chinese": "短裤" },
+        { "english": "not", "phonetic": "[nɒt]", "chinese": "不" },
+        { "english": "bag", "phonetic": "[bæɡ]", "chinese": "包" },
+        { "english": "trousers", "phonetic": "[ˈtraʊzəz]", "chinese": "长裤" }
+      ]
+    },
+    {
+      "id": "lesson17",
+      "name": "Lesson 17",
+      "words": [
+        { "english": "how", "phonetic": "[haʊ]", "chinese": "怎样" },
+        { "english": "bus", "phonetic": "[bʌs]", "chinese": "公共汽车" },
+        { "english": "by", "phonetic": "[baɪ]", "chinese": "乘……去" },
+        { "english": "car", "phonetic": "[kɑː]", "chinese": "小汽车" }
+      ]
+    },
+    {
+      "id": "lesson18",
+      "name": "Lesson 18",
+      "words": [
+        { "english": "work", "phonetic": "[wɜːk]", "chinese": "工作" },
+        { "english": "she", "phonetic": "[ʃiː]", "chinese": "她（主格）" },
+        { "english": "bike", "phonetic": "[baɪk]", "chinese": "自行车" }
+        
+      ]
+    },
+    {
+      "id": "lesson19",
+      "name": "Lesson 19",
+      "words": [
+        { "english": "he", "phonetic": "[hiː]", "chinese": "他（主格）" },
+        { "english": "come", "phonetic": "[kʌm]", "chinese": "来，来临" },
+        { "english": "taxi", "phonetic": "[ˈtæksi]", "chinese": "出租车" }
+      ]
+    },
+    {
+      "id": "lesson21",
+      "name": "Lesson 21",
+      "words": [
+        { "english": "they", "phonetic": "[ðeɪ]", "chinese": "他们（主格）" },
+        { "english": "sky", "phonetic": "[skaɪ]", "chinese": "天空" },
+        { "english": "blue", "phonetic": "[bluː]", "chinese": "蓝色的" },
+        { "english": "green", "phonetic": "[ɡriːn]", "chinese": "绿色的" },
+        { "english": "white", "phonetic": "[waɪt]", "chinese": "白色的" },
+        { "english": "snow", "phonetic": "[snəʊ]", "chinese": "雪" }
+      ]
+    },
+    {
+      "id": "lesson22",
+      "name": "Lesson 22",
+      "words": [
+        { "english": "cool", "phonetic": "[kuːl]", "chinese": "凉爽的" },
+        { "english": "cold", "phonetic": "[kəʊld]", "chinese": "冷的" },
+        { "english": "make", "phonetic": "[meɪk]", "chinese": "做" }
+      ]
+    },
+    {
+      "id": "lesson23",
+      "name": "Lesson 23",
+      "words": [
+        { "english": "which", "phonetic": "[wɪtʃ]", "chinese": "哪个，哪些" },
+        { "english": "spring", "phonetic": "[sprɪŋ]", "chinese": "春天" }
       ]
     }
   ]
